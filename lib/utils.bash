@@ -40,7 +40,6 @@ download_release() {
 	url="$GH_REPO/releases/download/v${version}/melange_${version}_$(get_platform)_$(get_arch).tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
-	echo "FILENAME -> $filename"
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
 }
 
